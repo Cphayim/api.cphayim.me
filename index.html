@@ -10,7 +10,7 @@
         body {
             margin: 0;
         }
-        canvas {
+        .overlay,canvas {
             display: block;
             position: absolute;
             top: 0;
@@ -18,10 +18,14 @@
             left: 0;
             right: 0;
         }
+        .overlay{
+            background-color: rgba(0,0,0,0.3);
+        }
     </style>
     </head>
     <body>
         <canvas id="canvas"></canvas>
+        <div class="overlay"></div>
         <script src="static/canvas/binaryRain.min.js" ></script>
         <script>
             binaryRain(document.getElementById('canvas'),true);
